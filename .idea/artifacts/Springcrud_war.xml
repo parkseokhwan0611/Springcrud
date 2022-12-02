@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="Springcrud:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>Springcrud</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="Springcrud-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="Springcrud:war exploded" />
+    </root>
+  </artifact>
+</component>
