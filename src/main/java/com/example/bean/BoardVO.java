@@ -7,6 +7,10 @@ public class BoardVO {
 	private String category;
 	private String title;
 	private String writer;
+	private String nickname;
+	private int number;
+	private String major;
+	private String department;
 	private String content;
 	private Date regdate;
 	private int cnt;
@@ -34,6 +38,30 @@ public class BoardVO {
 	}
 	public void setWriter(String writer) {
 		this.writer = writer;
+	}
+	public String getNickname() {
+		return nickname;
+	}
+	public void setNickname(String nickname) {
+		this.nickname = nickname;
+	}
+	public int getNumber() {
+		return number;
+	}
+	public void setNumber(int number) {
+		this.number = number;
+	}
+	public String getMajor() {
+		return major;
+	}
+	public void setMajor(String major) {
+		this.major = major;
+	}
+	public String getDepartment() {
+		return department;
+	}
+	public void setDepartment(String department) {
+		this.department = department;
 	}
 	public String getContent() {
 		return content;

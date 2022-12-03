@@ -45,6 +45,10 @@
 	<th>Category</th>
 	<th>Title</th>
 	<th>Writer</th>
+	<th>Nickname</th>
+	<th>Number</th>
+	<th>Major</th>
+	<th>Department</th>
 	<th>Content</th>
 	<th>Regdate</th>
 	<th>Edit</th>
@@ -56,6 +60,10 @@
 		<td>${u.getCategory()}</td>
 		<td>${u.getTitle()}</td>
 		<td>${u.getWriter()}</td>
+		<td>${u.getNickname()}</td>
+		<td>${u.getNumber()}</td>
+		<td>${u.getMajor()}</td>
+		<td>${u.getDepartment()}</td>
 		<td>${u.getContent()}</td>
 		<td>${u.getRegdate()}</td>
 		<td><a href="editpost/${u.seq}">Edit</a></td>
@@ -65,6 +73,7 @@
 	</tr>
 </c:forEach>
 </table>
-<br/><a href="/board/add">Add New Post</a>
+<br/><button tybe="button" onclick="location.href='addpost'">새글쓰기</button>
+
 </body>
 </html>

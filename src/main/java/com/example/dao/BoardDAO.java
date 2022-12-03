@@ -25,9 +25,13 @@ public class BoardDAO {
 
 
 	public int insertBoard(BoardVO vo) {
-		String sql = "insert into BOARD (title, writer, content, category) values ("
+		String sql = "insert into BOARD (title, writer, nickname, number, major, department, content, category) values ("
 				+ "'" +vo.getTitle() + "',"
 				+ "'" +vo.getWriter() + "',"
+				+ "'" +vo.getNickname() + "',"
+				+ "'" +vo.getNumber() + "',"
+				+ "'" +vo.getMajor() + "',"
+				+ "'" +vo.getDepartment() + "',"
 				+ "'" +vo.getContent() + "',"
 				+ "'" +vo.getCategory() + "')";
 		return jdbcTemplate.update(sql);
@@ -42,6 +46,10 @@ public class BoardDAO {
 		String sql = "update BOARD set "
 				+ " title='" + vo.getTitle() + "',"
 				+ " writer='" + vo.getWriter() + "',"
+				+ " nickname='" + vo.getNickname() + "',"
+				+ " number='" + vo.getNumber() + "',"
+				+ " major='" + vo.getMajor() + "',"
+				+ " department='" + vo.getDepartment() + "',"
 				+ " content='" + vo.getContent() + "',"
 				+ " category='" + vo.getCategory() + "' where seq=" + vo.getSeq();
 		return jdbcTemplate.update(sql);
@@ -55,6 +63,10 @@ public class BoardDAO {
 			vo.setTitle(rs.getString("title"));
 			vo.setContent(rs.getString("content"));
 			vo.setWriter(rs.getString("writer"));
+			vo.setNickname(rs.getString("nickname"));
+			vo.setNumber(rs.getInt("number"));
+			vo.setMajor(rs.getString("major"));
+			vo.setDepartment(rs.getString("department"));
 			vo.setCategory(rs.getString("category"));
 			vo.setRegdate(rs.getDate("regdate"));
 			return vo;
