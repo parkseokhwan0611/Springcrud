@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
+<%@ page language="java" contentType="text/html; charset=UTF-8" isELIgnored="false"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -8,8 +8,7 @@
 </head>
 <body>
 
-<%--<jsp:forward page="list.jsp" />--%>
-<%--<a href="/board/list">이동</a>--%>
+<a href="/login/login">이동</a>
 
 </body>
 </html>
